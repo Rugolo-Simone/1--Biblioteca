@@ -12,16 +12,45 @@ body{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#spanHead{
+#cardLogin{
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 4px double rgb(38, 38, 131);
+    border-radius: 10px;
+    width: 300px;
+    height: 200px;
+    margin-top: 120px;
 }
 
-#btnAccedi{
-    width: 100px;
-    border-radius: 5px;
-    background-color: rgb(99, 99, 223);
+#inputLog{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#btnLogin{
+    margin-top: 35px;
+}
+
+#datiUtente{
+    font-size: 10pt;
+    color: black;
+}
+
+#input{
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 header{

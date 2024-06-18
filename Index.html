@@ -10,10 +10,7 @@
 </head>
 <body>
     <header>
-        <span id="spanHead">
         BIBLIOTECA
-        <button id="btnAccedi">LOGIN</button>
-        </span>
         <nav id="navHead">
             <div id="divNavHead">
                 <a href="#" class="aN">Elenco</a>
@@ -21,12 +18,26 @@
                 <a href="#" class="aN">Prestiti</a>
             </div>
         </nav>
+        <p id="datiUtente"></p>
     </header>
     <main>
-        
+        <section id="sectLogin">
+            <div id="cardLogin">
+                ACCEDI<br>
+                <section id="inputLog">
+                    <section id="input">
+                        Nome:<input id="inputNome" type="text" placeholder="Inserisci il Nome">
+                    </section>
+                    <section id="input">
+                        E-Mail:<input id="inputMail" type="text" placeholder="Inserisci la Mail">
+                    </section>
+                </section>
+                <button id="btnLogin" onclick="Login()">LOGIN</button>
+            </div>
+        </section>
     </main>
     <footer>
-        © 2023 Rugolo Simone - Tutti i diritti sono riservati
+        © 2024 Rugolo Simone - Tutti i diritti sono riservati
     </footer>
 </body>
 </html>
