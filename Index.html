@@ -4,25 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/libro.ico">
-    <link rel="stylesheet" href="Index.css">
-    <script src="Index.js"></script>
+    <link rel="stylesheet" href="css/Index.css">
+    <script src="js/Index.js"></script>
     <title>Biblioteca</title>
 </head>
 <body>
     <header>
         BIBLIOTECA
-        <nav id="navHead">
-            <div id="divNavHead">
-                <a href="#" class="aN">Elenco</a>
-                <a href="Index.html" class="aN">Home</a>
-                <a href="#" class="aN">Prestiti</a>
-            </div>
-        </nav>
         <p id="datiUtente"></p>
     </header>
     <main>
-        <section id="sectLogin">
-            <div id="cardLogin">
+        <section id="sectMain">
+            <div class="cardMain">
                 ACCEDI<br>
                 <section id="inputLog">
                     <section id="input">
@@ -33,6 +26,14 @@
                     </section>
                 </section>
                 <button id="btnLogin" onclick="Login()">LOGIN</button>
+            </div>
+            <div class="cardMain">
+                <a href="Elenco.html" class="aPag">ELENCO</a>
+                <img src="img/elenco.avif" width="240" height="150">
+            </div>
+            <div class="cardMain">
+                <a href="Prestiti.html" class="aPag">PRESTITI</a>
+                <img src="img/prestiti.jpg" width="240" height="150">
             </div>
         </section>
     </main>

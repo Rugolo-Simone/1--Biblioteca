@@ -12,17 +12,6 @@ body{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#cardLogin{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 4px double rgb(38, 38, 131);
-    border-radius: 10px;
-    width: 300px;
-    height: 200px;
-    margin-top: 120px;
-}
-
 #inputLog{
     display: flex;
     flex-direction: column;
@@ -36,6 +25,24 @@ body{
 #datiUtente{
     font-size: 10pt;
     color: black;
+}
+
+.cardMain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 4px double rgb(38, 38, 131);
+    border-radius: 10px;
+    width: 300px;
+    height: 200px;
+    margin-top: 120px;
+}
+
+#sectMain{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 #input{
@@ -55,7 +62,7 @@ main{
 
 header{
     width: 100%;
-    height: 125px;
+    height: 80px;
     color: white;
     background-color: rgb(236, 161, 30);
     font-weight: bold;
@@ -64,13 +71,6 @@ header{
     padding-top: 15px;
 }
 
-.aN{
-    color: white;
-}
-
-#divNavHead{
-    margin-top: 35px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+.aPag{
+    color: blue;
 }
