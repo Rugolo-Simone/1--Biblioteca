@@ -27,9 +27,72 @@ header{
     width: 100%;
 }
 
+.aN{
+    color: rgb(38, 38, 131);
+}
+
 #navHead{
     margin-top: 35px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+}
+
+#aggLibro{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border: 4px double rgb(38, 38, 131);
+    border-radius: 10px;
+    width: 300px;
+    height: 200px;
+    margin-top: 60px;
+}
+
+.section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.tb{
+    border: 2px solid black;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.table{
+    border: 2px solid black;
+    border-collapse: collapse;
+    width: 200px;
+    height: 30px;
+    text-align: center;
+}
+
+.btnOrdina{
+    height: 20px;
+    border-radius: 5px;
+    background-color: white;
+    font-weight: bold;
+}
+
+#sectOrdina{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#divOrdina{
+    width: 600px;
+    height: 60px;
+    background-color: rgb(38, 38, 131);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
 }

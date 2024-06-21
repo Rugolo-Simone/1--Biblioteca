@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/elenco.ico">
     <link rel="stylesheet" href="css/Elenco.css">
+    <script src="js/Elenco.js"></script>
     <title>Elenco libri</title>
 </head>
 <body>
@@ -12,13 +13,37 @@
         ELENCO
         <div id="divNavHead">
             <nav id="navHead">
-                <a href="Index.html">HOME</a>
-                <a href="Prestiti.html">PRESTITI</a>
+                <a class="aN" href="Index.html">HOME</a>
+                <a class="aN" href="Prestiti.html">PRESTITI</a>
             </nav>
         </div>
     </header>
     <main>
+        <section id="sectOrdina">
+            <div id="divOrdina">
+                <button class="btnOrdina">ORDINA per data</button>
+                <button class="btnOrdina">ORDINA (A..Z)</button>
+                <button class="btnOrdina">ORDINA per genere</button>
+            </div>
+        </section>
+        <div id="aggLibro">
+            AGGIUNGI UN LIBRO<br>
+            <section>
+                <section>
+                    Titolo:<input id="inputTitolo" type="text" placeholder="Inserisci il Titolo">
+                </section>
+                <section>
+                    Genere:<input id="inputGenere" type="text" placeholder="Inserisci il genere">
+                </section>
+                <section>
+                    Data:<input id="inputData" type="text" placeholder="Inserisci la data">
+                </section>
+            </section>
+            <button onclick="aggiungi()">AGGIUNGI</button>
+        </div>
+        <section id="sectTabella">
 
+        </section>
     </main>
     <footer>
         © 2024 Rugolo Simone - Tutti i diritti sono riservati
