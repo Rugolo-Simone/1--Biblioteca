@@ -44,8 +44,14 @@ var Elenco = {
 }
 
 function init(){
+
     let sectTabella = document.getElementById("sectTabella");
     sectTabella.className = "section"
+
+    let cancellaTable = document.querySelector("table");
+    if (cancellaTable) {
+        sectTabella.removeChild(cancellaTable);
+    }
 
     let tb = document.createElement("table");
 
@@ -96,19 +102,48 @@ function init(){
 }
 
 function aggiungi(){
+
+    let verifica = false
+
     let titolo = document.getElementById("inputTitolo").value
     let genere = document.getElementById("inputGenere").value
     let data = document.getElementById("inputData").value
 
-    Elenco[titolo] = {
-        genere: genere,
-        data: data
+    if(titolo == ""){
+        alert("INSERIRE IL TITOLO!")
+        verifica = true
+    }
+    if(!verifica){
+        if(genere == ""){
+            alert("INSERIRE IL GENERE!")
+            verifica = true
+        }
+    }
+    if(!verifica){
+        if(data == ""){
+            alert("INSERIRE LA DATA!")
+            verifica = true
+        }
     }
 
-    let sectTabella = document.getElementById("sectTabella");
-    sectTabella = ""
+    if(!verifica){
+        let dataAnno = new Date()
 
-    console.log(Elenco)
-    init()
+        Elenco[titolo] = {
+            genere: genere,
+            data: dataAnno.getFullYear()
+        }
 
+        let cancellaTable = document.querySelector("table")
+        cancellaTable.innerHTML = ""
+
+        console.log(Elenco)
+        init()
+    }
+
+    alert("✅LIBRO AGGIUNTO CON SUCCESSO!")
+}
+
+function ordinaData(){
+    
 }

@@ -55,6 +55,8 @@ header{
     width: 100%;
     display: flex;
     justify-content: center;
+    max-height: 300px;
+    overflow: scroll;
 }
 
 .tb{
