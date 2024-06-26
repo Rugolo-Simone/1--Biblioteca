@@ -117,6 +117,17 @@ function init(){
     console.log(tb)
     tb.className = "tb"
     sectTabella.appendChild(tb);
+
+    let selectLibri = document.getElementById("selectLibro")
+
+    let opt = document.createElement("option")
+    selectLibri.appendChild(opt)
+
+    for(let libro in Elenco){
+        let opt2 = document.createElement("option")
+        opt2.innerHTML = libro
+        selectLibri.appendChild(opt2)
+    }
 }
 
 function creaTabella(){
@@ -379,5 +390,54 @@ function ordinaGenere(){
     }
     else if(clickGenere == 1){
         clickGenere = 0
+    }
+}
+
+var vettoreMail = []
+var vettorePrestiti = {}
+
+function aggiungiPrestito(){
+    let mail = document.getElementById("inputUtente").value
+    let libro = document.getElementById("selectLibro").value
+    let durata = document.getElementById("selectDurata").value
+
+    if(mail.includes("@") == false || libro == "" || durata == "")
+        alert("inserire tutti i dati necessari!")
+    else{
+        vettoreMail.push(mail)
+        console.log(vettoreMail)
+
+        let dt = new Date()
+        let data = dt.getDate() + "/" + (dt.getMonth()+1) + "/" + dt.getFullYear()
+        console.log(data)
+        let finePrestito
+        if(durata == "1 mese")
+            finePrestito =  dt.getDate() + "/" + (dt.getMonth()+2) + "/" + dt.getFullYear()
+        if(durata == "3 mesi")
+            finePrestito =  dt.getDate() + "/" + (dt.getMonth()+4) + "/" + dt.getFullYear()
+        if(durata == "6 mesi")
+            finePrestito =  dt.getDate() + "/" + (dt.getMonth()+7) + "/" + dt.getFullYear()
+        if(durata == "12 mesi")
+            finePrestito =  dt.getDate() + "/" + (dt.getMonth()+1) + "/" + (dt.getFullYear()+1)
+
+        vettorePrestiti[mail] = {
+            prestito: libro,
+            inizio: data,
+            fine: finePrestito
+        }
+        console.log(vettorePrestiti)
+
+        let ulPrestiti = document.getElementById("elencoPrestiti")
+
+        let ul = document.createElement("ul")
+
+        for(let key in vettorePrestiti){
+            let li = document.createElement("li")
+
+            li.innerHTML = key + " - " + vettorePrestiti[key].prestito + " - inizio prestito: " + vettorePrestiti[key].inizio + " - fine prestito: " + vettorePrestiti[key].fine
+            ul.appendChild(li)
+        }
+
+        ulPrestiti.appendChild(ul)
     }
 }

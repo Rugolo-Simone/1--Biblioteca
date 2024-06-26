@@ -10,11 +10,10 @@
 </head>
 <body>
     <header>
-        ELENCO
+        ELENCO & PRESTITI
         <div id="divNavHead">
             <nav id="navHead">
                 <a class="aN" href="Index.html">HOME</a>
-                <a class="aN" href="Prestiti.html">PRESTITI</a>
             </nav>
         </div>
     </header>
@@ -43,6 +42,26 @@
         </div>
         <section id="sectTabella">
 
+        </section>
+        <section id="sectUtente">
+            <div id="divUtente">
+                E-Mail:<input id="inputUtente" type="text" placeholder="Inserisci la Mail">
+                LIBRO:
+                <section id="durataPrestito">
+                    <select title="LIBRO" id="selectLibro"></select>
+                    <select title="DURATA" id="selectDurata">
+                        <option></option>
+                        <option>1 mese</option>
+                        <option>3 mesi</option>
+                        <option>6 mesi</option>
+                        <option>12 mesi</option>
+                    </select>
+                </section>
+                <button id="btnPrestito" onclick="aggiungiPrestito()">Prendi in prestito</button>
+                <section id="elencoPrestiti">
+                    
+                </section>
+            </div>
         </section>
     </main>
     <footer>
