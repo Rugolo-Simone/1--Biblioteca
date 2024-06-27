@@ -401,8 +401,12 @@ function aggiungiPrestito(){
     let libro = document.getElementById("selectLibro").value
     let durata = document.getElementById("selectDurata").value
 
-    if(mail.includes("@") == false || libro == "" || durata == "")
-        alert("inserire tutti i dati necessari!")
+    let verifica = verificaMail(mail)
+
+    if(!verifica || libro == "" || durata == "")
+        alert(`inserire tutti i dati necessari! 
+            ATTENZIONE! la Mail deve contenere la seguente formula: 
+            esempio@esempio.esempio`)
     else{
         vettoreMail.push(mail)
         console.log(vettoreMail)
@@ -440,4 +444,39 @@ function aggiungiPrestito(){
 
         ulPrestiti.appendChild(ul)
     }
+}
+
+function verificaMail(Mail){
+
+    if(Mail.includes("@") == false || Mail.includes(".") == false)
+        return false
+    else{
+
+    let indiceCh = Mail.indexOf("@")
+    let stringa1 = Mail.substring(0, indiceCh)
+
+    let indicePu = Mail.indexOf(".")
+    let stringa2 = Mail.substring(indiceCh+1, indicePu)
+    
+    let stringa3 = Mail.substring(indicePu+1)
+
+    if(stringaValida(stringa1) && stringaValida(stringa2) && stringaValida(stringa3))
+        return true
+    else
+        return false
+    }
+}
+
+function carattereValido(char) {
+
+    return (char >= 'a' && char <= 'z') || (char >= 'A' && char <= 'Z') || (char >= '0' && char <= '9')
+}
+
+function stringaValida(str) {
+    for (let i = 0; i < str.length; i++) {
+      if (carattereValido(str[i]) == false) {
+        return false;
+      }
+    }
+    return true;
 }
